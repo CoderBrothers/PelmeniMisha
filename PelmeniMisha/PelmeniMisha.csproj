@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="ktimer.ico" />
+    <None Remove="shutterstock_93437077.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="ktimer.ico" />
+    <Resource Include="shutterstock_93437077.jpg" />
+  </ItemGroup>
+
+</Project>

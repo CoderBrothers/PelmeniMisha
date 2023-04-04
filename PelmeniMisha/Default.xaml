@@ -1,0 +1,45 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style x:Key="TextBlock.Timer.Style" TargetType="TextBlock">
+        <Style.Setters>
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="Height" Value="150"/>
+            <Setter Property="FontSize" Value="50"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="0,55,0,0"/>
+        </Style.Setters>
+    </Style>
+    <Style x:Key="TextBlock.Divider.Style" TargetType="TextBlock" BasedOn="{StaticResource TextBlock.Timer.Style}">
+        <Setter Property="Width" Value="50"/>
+        <Setter Property="Text" Value=":"/>
+    </Style>
+    <Style x:Key="TextBlock.Time.Style" TargetType="TextBlock">
+        <Setter Property="Width" Value="114"/>
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="20"/>
+    </Style>
+    <Style x:Key="Button.Timer.Lime.Style" TargetType="Button">
+        <Setter Property="Width" Value="30"/>
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="Background" Value="LightBlue"/>
+    </Style>
+    <Style x:Key="Button.Timer.Orange.Style" TargetType="Button" BasedOn="{StaticResource Button.Timer.Lime.Style}">
+        <Setter Property="Margin" Value="0,0,10,0"/>
+        <Setter Property="Background" Value="PaleGreen"/>
+    </Style>
+    <Style x:Key="Window.Timer.Style" TargetType="Window">
+        <Setter Property="MinHeight" Value="450"/>
+        <Setter Property="MinWidth" Value="800"/>
+        <Setter Property="Background" Value="Black"/>
+    </Style>
+    <Style x:Key="TextBlock.Style" TargetType="TextBlock">
+        <Setter Property="Text" Value="Таймер"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="FontSize" Value="30"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+    </Style>
+</ResourceDictionary>

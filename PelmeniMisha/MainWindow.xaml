@@ -1,0 +1,44 @@
+﻿<Window x:Class="PelmeniMisha.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PelmeniMisha"
+        mc:Ignorable="d"
+        Title="Таймер готовки еды"
+        Style="{StaticResource Window.Timer.Style}" Icon="/ktimer.ico">
+    <Window.Background>
+        <ImageBrush ImageSource="/shutterstock_93437077.jpg"/>
+    </Window.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.50*"/>
+            <RowDefinition/>
+            <RowDefinition Height="0.65*"/>
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <TextBlock Style="{StaticResource TextBlock.Style}"/>
+            <Button x:Name="Start" Content="Start" Height="50" Width="100" Background="Bisque" Click="Start_Click"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
+            <TextBlock x:Name="Hours" Text="00" Style="{StaticResource TextBlock.Timer.Style}"/>
+            <TextBlock Style="{StaticResource TextBlock.Divider.Style}"/>
+            <TextBlock x:Name="Minutes" Text="00" Style="{StaticResource TextBlock.Timer.Style}"/>
+            <TextBlock Style="{StaticResource TextBlock.Divider.Style}"/>
+            <TextBlock x:Name="Seconds" Text="00" Style="{StaticResource TextBlock.Timer.Style}"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="2" HorizontalAlignment="Center">
+            <Button x:Name="PlusHours" Content="+" Style="{StaticResource Button.Timer.Lime.Style}" Click="PlusHours_Click"/>
+            <TextBlock Text="Hours" Style="{StaticResource TextBlock.Time.Style}"/>
+            <Button x:Name="MinusHours" Content="-" Style="{StaticResource Button.Timer.Orange.Style}" Click="MinusHours_Click"/>
+            <Button x:Name="PlusMinutes" Content="+" Style="{StaticResource Button.Timer.Lime.Style}" Click="PlusMinutes_Click"/>
+            <TextBlock Text="Minutes" Style="{StaticResource TextBlock.Time.Style}"/>
+            <Button x:Name="MinusMinutes" Content="-" Style="{StaticResource Button.Timer.Orange.Style}" Click="MinusMinutes_Click"/>
+            <Button x:Name="PlusSeconds" Content="+" Style="{StaticResource Button.Timer.Lime.Style}" Click="PlusSeconds_Click"/>
+            <TextBlock Text="Seconds" Style="{StaticResource TextBlock.Time.Style}"/>
+            <Button x:Name="MinusSeconds" Content="-" Style="{StaticResource Button.Timer.Orange.Style}" Click="MinusSeconds_Click"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
